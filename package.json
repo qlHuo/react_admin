@@ -1,0 +1,8 @@
+{
+  "name": "react_admin",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:qlHuo/react_admin.git",
+  "author": "霍青利 <1322346367@qq.com>",
+  "license": "MIT"
+}
