@@ -7,8 +7,14 @@ module.exports = {
   entry: './src/app.jsx',
   output: {
     path: path.resolve(__dirname, 'dist'),
-    publicPath: '/dist/',
+    publicPath: '/dist',
     filename: 'js/app.js'
+  },
+  resolve: {
+    alias: {
+      'page': path.resolve(__dirname, 'src/page'),
+      'components': path.resolve(__dirname, 'src/components')
+    }
   },
   module: {
     rules: [
@@ -67,7 +73,8 @@ module.exports = {
   plugins: [
     // 处理HTML文件
     new HtmlWebpackPlugin({
-      template: './src/index.html'
+      template: './src/index.html',
+      favicon: './favicon.ico'
     }),
     // 独立 css 文件
     new ExtractTextPlugin('css/[name].css'),
@@ -79,6 +86,9 @@ module.exports = {
   ],
   devServer: {
     // contentBase: './dist'
-    port: 8086
+    port: 8086,
+    historyApiFallback: {
+      index: '/dist'
+    }
   }
 }
