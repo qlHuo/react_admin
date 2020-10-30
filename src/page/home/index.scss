@@ -1,0 +1,22 @@
+.color-box {
+  display: block;
+  height: 160px;
+  line-height: 160px;
+  text-align: center;
+  transition: all 0.5s;
+  &:hover {
+    text-decoration: none;
+    color: #fff;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, .3);
+  }
+  .count {
+    padding-top: 50px;
+    font-size: 48px;
+  }
+  .description {
+    margin-top: 40px;
+    span {
+      margin-left: 5px;
+    }
+  }
+}
